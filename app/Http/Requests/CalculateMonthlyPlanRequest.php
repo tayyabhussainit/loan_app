@@ -2,10 +2,8 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
 
-class LoginUserRequest extends BaseApiRequest
+class CalculateMonthlyPlanRequest extends BaseApiRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,8 +21,10 @@ class LoginUserRequest extends BaseApiRequest
     public function rules(): array
     {
         return [
-            'email' => 'required|email',
-            'password' => 'required',
+            'loan_amount' => ['required', 'min:1'],
+            'annual_interest_rate' => ['required', 'min:1'],
+            'loan_term' => ['required', 'min:1'],
+            'extra_payment' => ['nullable','regex:/^\d+(\.\d{1,2})?$/']
         ];
     }
 }

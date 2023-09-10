@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\Auth\AuthController;
-use App\Http\Controllers\API\Loan\LoanController;
+use App\Http\Controllers\API\Loan\MortgageCalculatorController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -25,6 +25,6 @@ Route::post('/login', [AuthController::class, 'login']);
 
 // Protected routes
 Route::group(['middleware' => ['auth:sanctum']], function () {
-
+    Route::post('/calculate_monthly_plan', [MortgageCalculatorController::class, 'calculateMonthlyPlan']);
     Route::post('/logout', [AuthController::class, 'logout']);
 });
