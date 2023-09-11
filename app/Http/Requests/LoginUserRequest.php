@@ -2,9 +2,11 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Contracts\Validation\Validator;
-use Illuminate\Http\Exceptions\HttpResponseException;
-
+/**
+ * LoginUserRequest
+ * 
+ * Request to validate input of login request
+ */
 class LoginUserRequest extends BaseApiRequest
 {
     /**

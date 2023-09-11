@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\API;
 
-
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller as Controller;
 
-
+/**
+ * BaseController
+ * 
+ * Base controller for api response methods
+ */
 class BaseController extends Controller
 {
     /**

@@ -2,7 +2,11 @@
 
 namespace App\Http\Requests;
 
-
+/**
+ * CalculateMonthlyPlanRequest
+ * 
+ * Request to validate inputs of loan calculater request
+ */
 class CalculateMonthlyPlanRequest extends BaseApiRequest
 {
     /**
@@ -21,10 +25,10 @@ class CalculateMonthlyPlanRequest extends BaseApiRequest
     public function rules(): array
     {
         return [
-            'loan_amount' => ['required', 'min:1'],
-            'annual_interest_rate' => ['required', 'min:1'],
-            'loan_term' => ['required', 'min:1'],
-            'extra_payment' => ['nullable','regex:/^\d+(\.\d{1,2})?$/']
+            'loan_amount' => ['required', 'min:1', 'numeric'],
+            'annual_interest_rate' => ['required', 'min:1', 'numeric'],
+            'loan_term' => ['required', 'min:1'], 'numeric',
+            'extra_payment' => ['nullable','regex:/^\d+(\.\d{1,2})?$/', 'numeric']
         ];
     }
 }

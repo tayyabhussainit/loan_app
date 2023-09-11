@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 
 /**
+ * AuthController
+ * 
  * Controller responsible for Authentication on frontend end
  */
 class AuthController extends Controller{

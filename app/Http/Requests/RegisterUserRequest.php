@@ -3,7 +3,11 @@
 namespace App\Http\Requests;
 
 
-
+/**
+ * RegisterUserRequest
+ * 
+ * Request to validate register user request
+ */
 class RegisterUserRequest extends BaseApiRequest
 {
     /**

@@ -2,7 +2,6 @@
    
 namespace App\Http\Controllers\API\Auth;
    
-use Illuminate\Http\Request;
 use App\Http\Requests\RegisterUserRequest;
 use App\Http\Requests\LoginUserRequest;
 use App\Http\Controllers\API\BaseController as BaseController;
@@ -12,6 +11,8 @@ use Validator;
 use Illuminate\Http\JsonResponse;
 
 /**
+ * AuthController
+ * 
  * This controller is responsible for Authentication at API level
  */
 class AuthController extends BaseController
