@@ -19,9 +19,10 @@ class MonthlyPlanTest extends TestCase
       $annualInterestRate = 5;
       $laonTerm = 30;
 
+      $name = fake()->name;
       $email = fake()->email;
       $password = fake()->password;
-      $this->registerUser($email, $password);
+      $this->registerUser($name, $email, $password, $password);
       $login = $this->loginUser($email, $password);
       $response = $this->withHeaders([
          'Accept' => 'application/json',

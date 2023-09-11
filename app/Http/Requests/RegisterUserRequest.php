@@ -23,7 +23,7 @@ class RegisterUserRequest extends BaseApiRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|unique:users',
+            'email' => 'required|unique:users|email',
             'password' => 'required',
             'confirm_password' => 'required|same:password',
         ];

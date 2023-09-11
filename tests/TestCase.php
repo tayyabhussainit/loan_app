@@ -15,15 +15,15 @@ abstract class TestCase extends BaseTestCase
         $this->withoutExceptionHandling();
     }
 
-    protected function registerUser($email, $password): array
+    protected function registerUser($name, $email, $password, $confirmPassword): array
     {
         return $this->withHeaders([
             'Accept' => 'application/json',
         ])->post('/api/register', [
-            'name' => fake()->name,
+            'name' => $name,
             'email' => $email,
             'password' => $password,
-            'confirm_password' => $password
+            'confirm_password' => $confirmPassword
         ])->json();
     }
 

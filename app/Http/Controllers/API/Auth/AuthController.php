@@ -10,7 +10,10 @@ use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Validator;
 use Illuminate\Http\JsonResponse;
-   
+
+/**
+ * This controller is responsible for Authentication at API level
+ */
 class AuthController extends BaseController
 {
     /**
