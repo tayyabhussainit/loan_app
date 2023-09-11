@@ -45,6 +45,9 @@ Clone this Repository
 
 	git clone git@github.com:tayyabhussainit/loan_app.git
 
+After clone, checkout to branch loan_management
+
+	git checkout loan_management
   
 
 ### 2- Root dir
@@ -107,7 +110,22 @@ Open http://localhost:8080 in browser. Login user after registration
 
 After login, you will be redirected to calculater page
 
-  
+## Sample screens
+
+## 1- Login
+![alt text](https://github.com/tayyabhussainit/loan_app/tree/loan_management/sample_screens/login.png)
+
+## 2- Register
+![alt text](https://github.com/tayyabhussainit/loan_app/tree/loan_management/sample_screens/register.png)
+
+## 3- Calculater
+![alt text](https://github.com/tayyabhussainit/loan_app/tree/loan_management/sample_screens/calculater.png)
+
+## 4- Sample result amortization plan
+![alt text](https://github.com/tayyabhussainit/loan_app/tree/loan_management/sample_screens/sample_result_amortization.png)
+
+## 5- Sample result amortization plan with extra payment
+![alt text](https://github.com/tayyabhussainit/loan_app/tree/loan_management/sample_screens/sample_result_amortization_extra_payment.png)
 
 ## Unit tests
 
