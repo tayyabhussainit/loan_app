@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\API\Loan\MortgageCalculatorController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\MortgageLoanCalculatorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [AuthController::class, 'login']);
+Route::get('/register', [AuthController::class, 'register']);
+Route::get('/mortgage_loan_calculater', [MortgageLoanCalculatorController::class, 'index'])->name('calculater');
